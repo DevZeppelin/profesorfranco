@@ -1,0 +1,707 @@
+/*paleta de colores
+#353866
+#6d819c
+#CBA6C3
+#F8FAFF
+*/
+
+*{
+    margin: 0;
+}
+
+body{
+    /*siempre es bueno poner el margin 0 al principio para quitar los amrgenes que vienen por defecto que nos ocupan lugar al dope*/
+    margin: 0;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 19px;
+    background-color: #CBA6C3;
+    color: #353866;
+    
+}
+
+header .contenedor{
+/*los estilos van por niveles. me va a plicar estilo al contenedor que este en el header*/
+    display: flex;
+    /*este va sobre el elemento PADRE. por eso va sobre el contenedor.*/
+    justify-content: center;
+    /*justificame el contenido a los espacios. tambein podria poner center, o flex-start para qe vaya a la izquierda*/
+
+}
+
+#radio {
+    display: flex;
+    position: center;
+    justify-content: center;
+}
+
+
+/*debo llamar a la etiqueta padre para ordenar los elementos de la lista. le tengo que poner clase al ul, el display flex lo que hizo fue poner un item al aldo del otro en vez de uno arriba del otro.*/
+
+
+.lista-menu a {
+    color: #CBA6C3;
+   
+}
+
+
+
+header ul {
+    display: flex;
+    /*color: white;*/
+    text-decoration: solid;  
+}
+
+
+/*sacar puntitos de la lista*/
+
+header ul li {
+    list-style: none;
+    margin: 15px;
+}
+
+/*sacar subrayados. le saco el header para que aplique a todos los elementos a de la página*/
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+}
+
+#contenedor-titulo-flex{
+/*como es un solo div queda bien pero si fueran 2 div o una lista de ul quedarian simplemente uno al lado del otro*/
+    display: flex;
+    justify-content: center;
+
+    /*viewport height es el alto de la ventana. le digo q me baje el 18% de la ventana.
+    y el 0? los amrgenes van en sentido del reloj: top right bottom left.
+    lo que hice es igual a :
+    margin-top: 18vh;
+    margin-right: 0px;
+    margin-bottom: 18vh;
+    margin-left: 0px;*/
+        margin: 8vh 0;
+        max-width: 1500px;
+        width: 100%;
+}
+
+header {
+   
+    background: url(imagenes/background.jpg);
+
+    height: 100vh;
+    
+    /*esto adapta el tamaño al ancho de mi pantalla. es genial*/
+    background-size: cover;
+  
+
+
+   
+}
+
+h1 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 91px;
+    color: #353866;
+    text-align: center;
+    margin: 0;
+    -webkit-text-stroke: 1px #6d819c;
+    
+   
+    
+    
+    
+}
+
+h2 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 40px;
+    color: #F8FAFF;
+    text-align: center;
+    text-shadow: 3px 3px 1px #353866;
+    padding-bottom: 40px;
+    
+
+    
+    
+}
+
+.contenedor-titulo {
+    text-align: center;
+}
+
+
+
+/*-------------------AQUIII BOTONES!!!---------------------*/
+/*aca agrego todos los botones para que tengan el mismo estilo, desps si quiero modificar uno lo modifico aparte*/
+.contenedor-titulo a, #sobre-mi-btn, #blog a, #que-esperas a, #contacto input[type="submit"] {
+
+    font-size: 14px;
+    color: #fff;
+    background: #353866;
+    padding: 14px 24px;
+    /*el padding es iguial que el margin. top right bottom left. por eso puse 2 ejes y me lo acomodo*/
+    text-align: center;
+    width: 128px;
+    border-radius: 6px;
+
+    /*hay elementos en linea y elementos de bloque. el elemento A es de LINEA. por eso no se alinea simplemente con un text-align. por eso le tengo que pponer inline-block. para alinear al centro le pongo la prop al contenedor-titulo*/
+    display: inline-block;
+   
+}
+
+.contenedor-titulo a:hover, #sobre-mi a:hover, #blog a:hover {
+    box-shadow: 0px 0px 5px 5px #CBA6C3;
+}
+
+
+p.logo {
+
+    color: #FFF;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+    padding-right: 20px;
+    
+}
+
+/*.........................SECCION DE "SOBRE MI"..................*/
+
+h3 {
+
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+    color: #353866;
+    text-shadow: 3px 3px 1px #CBA6C3;
+    /*margin-top: 100px;    */
+    
+}
+
+
+
+#sobre-mi .contenedor-sobremi {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#sobre-mi .texto {
+    
+    width: 50%;
+    text-align: center;
+    padding-top: 20px;
+    padding: 20px;
+    
+    
+   
+}
+
+
+
+.texto img {
+    
+    display: flex;
+   
+    
+}
+
+.text-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px #353866 ;
+    
+}
+
+.text-item p {
+    font-size: 26px;
+}
+
+
+
+
+/*.........................SAECCION BLOG.............................*/
+
+
+
+#blog .contenedor-publicaciones {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    
+}
+
+#blog .publicacion{
+
+    width: 30%;
+    /*recordar que la sombre la puedo generar en la pag*/
+    box-shadow: 1px 1px 14px #353866;
+    margin-left: 10px;
+    margin-bottom: 60px;
+    
+}
+
+#blog img {
+    width: 100%;
+}
+
+#blog .contenido {
+    background: #CBA6C3;
+    padding: 20px;
+    height: 95%;
+    color: #353866;
+}
+
+#blog h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin: 0;
+}
+
+#blog p {
+    color: #353866;
+    line-height: 24px;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#blog a {
+    width: 87px;
+}
+
+
+/*---------------------HOVERS-------------------------*/
+
+.contenido:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px 15px #CBA6C3;
+}
+
+.item {
+    padding: 20px;
+}
+
+.item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 5px #CBA6C3;
+}
+
+
+.link-face a {
+    color: rgb(0, 62, 185)
+}
+
+
+ 
+  .contacto-info {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    margin-top: 60px;
+    padding: 60px;
+
+  }
+
+  .contacto-info img {
+    
+    /*el vertical align me alinea la foto con el texto apra que no queda cada unoa rriba del otro o desalineado*/
+    vertical-align: middle;
+    /*con margin-right: separo la imagen del texto;*/
+    margin-right: 20px;
+  }
+
+
+
+
+   /*.........................FOOTER..................*/
+
+
+   footer {
+
+    background: #353866;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+   }
+
+   footer .contenedor {
+
+    display: flex;
+    justify-content: center;
+    /*este por defecto vienen en raw, por eso se pone uno al lado del otro. si lo pongo en columna pone uno abajo del otro*/
+    flex-direction: column;
+   }
+
+   footer img {
+    margin: 0 40px;
+    transform: rotate(0);
+    /*en la rotacion necesito definir primero el grado por defecto, luego en el :hover cuanto quiero que rote, y luego la transition que es el tiempo en el defect y en el hover. deg es grados en ingles*/
+    transition: 0.4s;
+
+   }
+
+   footer img:hover {
+    transform: rotate(360deg);
+    transition: 0.4s;
+
+   }
+
+   footer p {
+       color: #fff;
+       margin-top: 40px;
+   }
+
+   
+   /*..............estilo htm................*/
+
+   html {
+       
+       scroll-behavior: smooth;
+   }
+
+   /*dando padding a las secciones para que cuando cliqueo en el link se vea el titulo y no se tape*/
+
+   #sobre-mi, #servicios, #mis-trabajos, #por-que-trabajar, #blog, #contacto {
+
+    padding: 70px 0;
+   }
+
+
+   /*.............................IMPORTANTISIMA PARTE DEL RESPONSIVE DESIGN..........................*/
+
+   
+   
+   
+   .menu-icon {
+       /*display none sirve para eliminar un elemento de la pantalla*/
+    display: none;
+      }
+
+    .logo {
+        display: none;
+        
+    }
+
+
+   /*en el medio que se va a ver esta pag sera con un ancho maximo de 800 px (suficiente para tablets como para fonos) si es solo para celus le ponemos 480px. */
+  
+  
+   /*.........................SECCION MIS TRABAJOS.....................*/
+
+
+
+.item p {
+
+    text-align: center;
+}
+
+#logo-face {
+    display: flex;
+    justify-content: center;
+}
+
+
+.imagen-fija{
+
+    background: url(imagenes/01.jpg);
+    
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-attachment: fixed;
+    padding-bottom: 60px;
+    background-position: center;
+}
+
+.imagen-fija2{
+
+    background: url(imagenes/02.jpg);
+    
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-attachment: fixed;
+   
+    background-position: center;
+}
+
+.imagen-fija3{
+
+    background: url(imagenes/03.jpg);
+    
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-attachment: fixed;
+    padding-bottom: 60px;
+    background-position: center;
+}
+
+.imagen-fija4{
+
+    background: url(imagenes/04.jpg);
+    
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-attachment: fixed;
+    padding-bottom: 60px;
+    background-position: center;
+}
+
+
+  
+   @media (max-width: 800px) {
+
+    
+    body {
+        margin: 0;
+    }
+
+    #top-id .logo {
+
+        font-size: 26px;
+    }
+
+    .lista-menu a {
+        color: rgb(255, 255, 255);
+    }
+
+
+    .menu-icon {
+        /*es lo contrario al display none*/
+        display: block;
+        /*primero no flotara porque esta el menu estorbando*/
+        float: right;
+        width: 40x;
+        height: 40px;
+        padding: 20px 20px;
+    }
+   
+    header nav {
+        position: absolute;
+        top: 83px;
+        left: 0;
+        height: 320px;
+        background: #353866;
+        width: 100%;
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        color: white;
+    }
+
+    header nav ul li {
+
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+            font-size: 65px;
+            margin-bottom: 25px;
+          
+            -webkit-text-stroke: 1px rgb(255, 255, 255);
+    }
+    
+
+    h2 {
+        font-size: 12px;
+        color: white;
+    }
+
+    h3 {
+        font-size: 45px;
+    }
+
+    .contenedor-titulo {
+        margin: -6vh 0;        
+    }
+
+    .contenedor-titulo h2 {
+        font-size: 40px;
+      
+    }
+
+    #sobre-mi .contenedor-sobremi {
+        
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        
+    }
+
+    #profile-img {
+        display: flex;
+       padding-top: 20px;
+       padding-left: 20px;
+        margin: 0;
+        
+    }
+
+    .text-item{
+        
+        
+        
+        flex-direction: column;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        box-shadow: 2px 2px 2px #353866 ;
+    }
+
+    .text-item p {
+        font-size: 20px;
+    }
+
+    #sobre-mi .texto {
+        width: 98%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .contenedor-servicios {
+        flex-direction: column;
+    }
+
+   
+
+    .contenedor-trabajar {
+
+        flex-direction: column;
+    }
+
+    #por-que-trabajar .item {
+        width: 100%;
+        }
+
+    .item ul {
+        padding: 0;
+    }
+
+    #blog .contenedor-publicaciones {
+        flex-direction: column;
+
+    }
+
+    #blog .publicacion {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    
+
+    footer img {
+        margin: 24px;
+    }
+
+    .lista-menu li a {
+        color: rgb(245, 247, 250);
+    }
+
+    .contacto-info {
+        padding: 0;
+        flex-direction: column;
+        font-size: 16px
+    }
+
+    #whatsapp img {
+
+        width: 53px;
+        height: 53px;
+    }
+/*
+    .contenedor-titulo h1 {
+        -webkit-text-stroke: 0.01cm white;
+        color: rgb(0, 65, 161);
+
+    }*/
+
+  }
+
+/*AHORA LO VAMOS A CONFIGURAR PARA IPAD Y TABLETS*/
+/*al ponerle un miniom me aseguro que no va a ser un celular*/
+
+
+
+@media (max-width: 330px) {
+
+    
+
+    header h1 {
+        font-size: 52px;
+        margin-bottom: 25px;
+       
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+    }
+
+    .contenedor-titulo h2 {
+
+        font-size: 30px;
+    }
+
+    .text-item p {
+        font-size: 16px;
+    }
+
+    #whatsapp img {
+
+        width: 30px;
+        height: 30px;
+        top: 86%;
+    }
+
+    
+
+    .lista-menu li {
+        font-size: 14px;
+    }
+
+
+
+
+
+
+
+}
+  
+@media (min-width: 600px) and (max-width: 800px) {
+
+    header {
+        height: 70vh;
+    }
+
+    header h1 {
+        margin-bottom: 100px;
+        font-size: 90px;
+    }
+
+    .contenedor-servicios {
+
+        width: 500px;
+        /*margin auto para centrarlo*/
+        margin: auto;
+    }
+
+    .contenedor-publicaciones {
+
+        width: 70%;
+        margin: auto;
+    }
+
+
+
+  }
