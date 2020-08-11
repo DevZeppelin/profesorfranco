@@ -16,7 +16,6 @@ body{
     font-size: 19px;
     background-color: #CBA6C3;
     color: #353866;
-    
 }
 
 header .contenedor{
@@ -35,24 +34,14 @@ header .contenedor{
 }
 
 
-/*debo llamar a la etiqueta padre para ordenar los elementos de la lista. le tengo que poner clase al ul, el display flex lo que hizo fue poner un item al aldo del otro en vez de uno arriba del otro.*/
-
-
 .lista-menu a {
     color: #CBA6C3;
-   
 }
-
-
 
 header ul {
     display: flex;
-    /*color: white;*/
     text-decoration: solid;  
 }
-
-
-/*sacar puntitos de la lista*/
 
 header ul li {
     list-style: none;
@@ -74,31 +63,16 @@ a {
 /*como es un solo div queda bien pero si fueran 2 div o una lista de ul quedarian simplemente uno al lado del otro*/
     display: flex;
     justify-content: center;
-
-    /*viewport height es el alto de la ventana. le digo q me baje el 18% de la ventana.
-    y el 0? los amrgenes van en sentido del reloj: top right bottom left.
-    lo que hice es igual a :
-    margin-top: 18vh;
-    margin-right: 0px;
-    margin-bottom: 18vh;
-    margin-left: 0px;*/
-        margin: 8vh 0;
-        max-width: 1500px;
-        width: 100%;
+    margin: 8vh 0;
+    max-width: 1500px;
+    width: 100%;
 }
 
-header {
-   
+header {   
     background: url(imagenes/background.jpg);
-
-    height: 100vh;
-    
+    height: 100vh;    
     /*esto adapta el tamaño al ancho de mi pantalla. es genial*/
     background-size: cover;
-  
-
-
-   
 }
 
 h1 {
@@ -108,11 +82,6 @@ h1 {
     text-align: center;
     margin: 0;
     -webkit-text-stroke: 1px #6d819c;
-    
-   
-    
-    
-    
 }
 
 h2 {
@@ -122,10 +91,6 @@ h2 {
     text-align: center;
     text-shadow: 3px 3px 1px #353866;
     padding-bottom: 40px;
-    
-
-    
-    
 }
 
 .contenedor-titulo {
@@ -136,7 +101,7 @@ h2 {
 
 /*-------------------AQUIII BOTONES!!!---------------------*/
 /*aca agrego todos los botones para que tengan el mismo estilo, desps si quiero modificar uno lo modifico aparte*/
-.contenedor-titulo a, #sobre-mi-btn, #blog a, #que-esperas a, #contacto input[type="submit"] {
+.contenedor-titulo a, #sobre-mi-btn, #blog a, #que-esperas a {
 
     font-size: 14px;
     color: #fff;
@@ -146,7 +111,6 @@ h2 {
     text-align: center;
     width: 128px;
     border-radius: 6px;
-
     /*hay elementos en linea y elementos de bloque. el elemento A es de LINEA. por eso no se alinea simplemente con un text-align. por eso le tengo que pponer inline-block. para alinear al centro le pongo la prop al contenedor-titulo*/
     display: inline-block;
    
@@ -169,20 +133,16 @@ p.logo {
 /*.........................SECCION DE "SOBRE MI"..................*/
 
 h3 {
-
     text-align: center;
     font-size: 55px;
     font-weight: bold;
     color: #353866;
     text-shadow: 3px 3px 1px #CBA6C3;
-    /*margin-top: 100px;    */
-    
+    /*margin-top: 100px;    */    
 }
 
 
-
 #sobre-mi .contenedor-sobremi {
-
     display: flex;
     justify-content: space-around;
 }
@@ -193,18 +153,13 @@ h3 {
     text-align: center;
     padding-top: 20px;
     padding: 20px;
-    
-    
-   
 }
 
 
-
-.texto img {
-    
+.texto img {    
     display: flex;
-   
-    
+    height: 40px;
+    width: 40px;
 }
 
 .text-item {
@@ -215,37 +170,32 @@ h3 {
     padding-bottom: 10px;
     padding: 10px;
     box-shadow: 1px 1px 1px #353866 ;
-    
 }
 
 .text-item p {
     font-size: 26px;
 }
 
-
-
+#profile-img{
+    margin-top: 90px;
+}
 
 /*.........................SAECCION BLOG.............................*/
 
 
-
 #blog .contenedor-publicaciones {
-
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 0 20px;
-    
 }
 
 #blog .publicacion{
-
     width: 30%;
     /*recordar que la sombre la puedo generar en la pag*/
     box-shadow: 1px 1px 14px #353866;
     margin-left: 10px;
     margin-bottom: 60px;
-    
 }
 
 #blog img {
@@ -320,8 +270,6 @@ h3 {
   }
 
 
-
-
    /*.........................FOOTER..................*/
 
 
@@ -375,25 +323,16 @@ h3 {
     padding: 70px 0;
    }
 
-
    /*.............................IMPORTANTISIMA PARTE DEL RESPONSIVE DESIGN..........................*/
 
    
-   
-   
    .menu-icon {
-       /*display none sirve para eliminar un elemento de la pantalla*/
     display: none;
       }
 
     .logo {
-        display: none;
-        
+        display: none;        
     }
-
-
-   /*en el medio que se va a ver esta pag sera con un ancho maximo de 800 px (suficiente para tablets como para fonos) si es solo para celus le ponemos 480px. */
-  
   
    /*.........................SECCION MIS TRABAJOS.....................*/
 
@@ -402,11 +341,6 @@ h3 {
 .item p {
 
     text-align: center;
-}
-
-#logo-face {
-    display: flex;
-    justify-content: center;
 }
 
 
@@ -623,18 +557,8 @@ h3 {
         width: 53px;
         height: 53px;
     }
-/*
-    .contenedor-titulo h1 {
-        -webkit-text-stroke: 0.01cm white;
-        color: rgb(0, 65, 161);
-
-    }*/
 
   }
-
-/*AHORA LO VAMOS A CONFIGURAR PARA IPAD Y TABLETS*/
-/*al ponerle un miniom me aseguro que no va a ser un celular*/
-
 
 
 @media (max-width: 330px) {
@@ -664,17 +588,10 @@ h3 {
         top: 86%;
     }
 
-    
 
     .lista-menu li {
         font-size: 14px;
     }
-
-
-
-
-
-
 
 }
   
@@ -701,7 +618,5 @@ h3 {
         width: 70%;
         margin: auto;
     }
-
-
 
   }
